@@ -1,0 +1,34 @@
+        <div class="row" ng-controller="blogCreateController as currentBlog" ng-init="currentBlog.loadSingeBlog()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <br/>
+
+                <div class="post-preview">
+                   <form ng-submit="currentBlog.createPost()">
+                       
+                       <input placeholder="Heading of Blog" type="text" name="heading" ng-model="currentBlog.heading" required=""><br/><br/>
+                       <input placeholder="Sub Heading of Blog" type="text" name="subHeading" ng-model="currentBlog.subHeading" required=""><br/><br/>
+                       <input placeholder="Author" type="text" name="author" ng-model="currentBlog.author" required=""><br/><br/>
+                      
+                       <textarea rows="4" cols="50" ng-model="currentBlog.bodyHtml" required="">
+                            
+                       </textarea>
+                       <br/><br/>
+                       <input type="submit" class="btn btn-info" value="Create Blog">
+
+
+
+                   </form>
+                </div>
+                <hr>
+                
+              
+             
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+

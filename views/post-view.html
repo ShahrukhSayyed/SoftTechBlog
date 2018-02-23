@@ -1,0 +1,24 @@
+        <div class="row" ng-controller="singleBlogController as singleBlog" ng-init="singleBlog.loadSingeBlog()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+		            <form ng-submit="singleBlog.deleteBlog()">
+                        <h3> {{singleBlog.blog.heading}} </h3>
+                        <h5> {{singleBlog.blog.subHeading}} </h5>
+                        <p>  {{singleBlog.blog.bodyHtml}} </p>
+                        <p class="post-meta">Posted by <a href="#">{{singleBlog.blog.author}}</a> on {{singleBlog.blog.created | date:'medium'}}</p>
+		                <a ng-href="#/blog/{{singleBlog.blog.blogId}}/edit" class="btn btn-info" role="button">Edit this Blog &rarr;</a>
+		                <input type="submit" class="btn btn-info" value="Delete blog" >
+		            </form>
+                </div>
+	
+                <hr>
+                
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#/" >Back to Home &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
